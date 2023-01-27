@@ -21,6 +21,8 @@
         span{
             display: flex;
             justify-content: space-around;
+            align-items: center;
+
 
         }
         .divsmall{
@@ -60,6 +62,7 @@
         a{
             color: white;
             text-decoration: none;
+            color: rgb(180, 231, 250);
         }
         a:hover{
             color: blue;
@@ -72,8 +75,22 @@
             height: 60px;
             background-color: black;
         }
+        input[type='radio'] 
+        { 
+            transform: scale(2); 
+            margin: 0px;
+        }
+        input[type='checkbox'] 
+        { 
+            transform: scale(2); 
+        }
     </style>
     <script>
+        var auto_refresh = setInterval(function() { submitform();}, 1000);
+        function submitform()
+        {
+            document.getElementById("BeliebigerContainerSchiff").submit();
+        }
         var punkte = 0;
     </script>
 </head>
@@ -92,7 +109,9 @@
                 </d>
             </span>
             <span>
-                <input type="number" id="BeliebigerContainerSchiff"  min="0" max="2" value="0">
+                <form>
+                    <input type="number" id="BeliebigerContainerSchiff"  min="0" max="2" value="0">
+                </form>
             </span>
         </div>
         <div class = "divsmall">
@@ -103,7 +122,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
 
         </div>    
@@ -121,7 +140,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
         </div>
     </div>
@@ -138,7 +157,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
         </div>
         <div class = "divsmall">
@@ -161,7 +180,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
         </div>
     </div>
@@ -178,18 +197,27 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
         </div>
         <div class = "divsmall">
             <span><img src="SpetialcontainerInSchlaufe.jpg"></span>
             <span>
                 <d>    
-                    Spitze des Kran A(1)/B(2) befindet sich in Schlaufe des Containers
+                    Spitze des Kran A/B befindet sich in Schlaufe des Containers
                 </d>
             </span>
+            <br>
             <span>
-                <input type="number" min="0" max="2" value="0">
+                <d>0</d>
+                <d>A</d>
+                <d>B</d>
+            </span>
+            <br>
+            <span>
+                <input type="radio" name="Kran" id="Kran" value="Nein">
+                <input type="radio" name="Kran" id="Kran" value="A">
+                <input type="radio" name="Kran" id="Kran" value="B">
             </span>
 
         </div>    
@@ -201,7 +229,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
         </div>
     </div>
@@ -213,8 +241,8 @@
         <div class = "divsmall">
             <span><img src="BootLinieUeberquert.jpg"></span>
             <span>
-                <d>    
-                    Schiff hat die gepunktete dunkelblaue Linie vollständig überquert
+                <d>
+                    Schiffe hat die gepunktete dunkelblaue Linie vollständig überquert
                 </d>
             </span>
             <span>
@@ -252,7 +280,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
         </div>
         <div class = "divsmall">
@@ -263,7 +291,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="1" value="0">
+                <input type="checkbox">
             </span>
 
         </div>    
@@ -281,44 +309,14 @@
     <br>
     <br>
     <d>    
-        Bilder: <a href="https://www.worldrobotolympiad.de">WorldRobotOlympiad-Aufgaben-RegularCategory-Senior-WRO2023-RM-Senior</a>
+        Bilder: <a href="https://www.worldrobotolympiad.de" target="_blank">WorldRobotOlympiad-Aufgaben-RegularCategory-Senior-WRO2023-RM-Senior</a>
     </d>
     <br>
-    <!--<d>Urheber: RoboticBoy</d>-->
+    <d>Urheber: RoboticBoy</d>
     <br>
+    <d>Erstellt mit: <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></d>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <d>Veröffentlicht mit: <a href="https://www.github.com" target="_blank">GitHub</a>; <a href="https://dash.cloudflare.com" target="_blank">Cloudflare dash</a></d>
     <br>
     <br>
     <br>
@@ -343,10 +341,14 @@
     <br>
 
     <script>
-            punkte =  document.getElementById("BeliebigerContainerSchiff").value;
-        
-        document.getElementById("Gesamtpunktzahl").innerHTML = punkte;
-    </script>
+                var auto_refresh = setInterval(function() { berechne();}, 3000);
+                function berechne(){
+                    punkte =  document.getElementById("BeliebigerContainerSchiff").value;
+                    document.getElementById("Gesamtpunktzahl").innerHTML = punkte;
+                    document.getElementById("Gesamtpunktzahl").max = 1;
+                }
+
+        </script>
 </body>
 </html>
 
