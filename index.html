@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7477621679267514"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="3">-->
+    <!--<meta name="keywords" content="WRO, wro, Wro, WROtools, RoboticOlympiade, RoboticBoys, Senior, 2023, WROSenior2023">
+    <meta name="author" content="RoboticBoy">
+    <meta name="description" content="Gesamtpunkteauswertung für die WRO-Senior 2023 Aufgaben">-->
+    <title>WROSeniorPunkte</title>
+    <style>
+        div{
+            border-radius: 8px 8px 8px 8px;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+        span{
+            display: flex;
+            justify-content: space-around;
+
+        }
+        .divsmall{
+            width: 33%;
+            height: 400px;
+            background-color: black;
+        }
+        .divbig{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        img{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 90%;
+            height: 64;
+            border-radius: 8px 8px 8px 8px;
+        }
+        d{
+            font-size: 90%;
+            color: white;
+        }
+        input{
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        h1{
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: blue;
+        }
+        .Punkte{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 50%;
+            height: 60px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teilaufgabe 1 – Beladet das kleine Schiff</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="BootKleinContainer.jpg"></span>
+            <span>
+                <d>    
+                    Ein beliebiger Container wurde auf das kleine Schiff verladen
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="2" value="0">
+            </span>
+        </div>
+        <div class = "divsmall">
+            <span><img src="BootKleinVoll.jpg"></span>
+            <span>
+                <d>    
+                    Das kleine Schiff wurde vollständig beladen
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+
+        </div>    
+    </div>
+
+
+    <h1>Teilaufgabe 2 – Betankt das große Schiff</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="BootGroßTreibstoffstein.jpg"></span>
+            <span>
+                <d>    
+                    Treibstoff-Stein befindet sich im/auf dem großen Schiff
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" min="0" max="1" value="0">
+            </span>
+        </div>
+    </div>
+
+
+    <h1>Teilaufgabe 3 – Beladet das große Schiff</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="BootGroßContainerW.jpg"></span>
+            <span>
+                <d>    
+                    Weißer Container wurde auf das große Schiff verladen
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+        </div>
+        <div class = "divsmall">
+            <span><img src="BootGroßContainer.jpg"></span>
+            <span>
+                <d>    
+                    Container der richtigen Farbe wurden auf das große Schiff verladen
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="2" value="0">
+            </span>
+
+        </div>    
+        <div class = "divsmall">
+            <span><img src="BootGroßVoll.jpg"></span>
+            <span>
+                <d>    
+                    Schiff ist vollständig beladen
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+        </div>
+    </div>
+
+
+    <h1>Teilaufgabe 4 – Entladet den Spezialcontainer</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="SpetialcontainerRoboter.jpg"></span>
+            <span>
+                <d>    
+                    Der Roboter hält den roten Spezialcontainer
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+        </div>
+        <div class = "divsmall">
+            <span><img src="SpetialcontainerInSchlaufe.jpg"></span>
+            <span>
+                <d>    
+                    Spitze des Kran A(1)/B(2) befindet sich in Schlaufe des Containers
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="2" value="0">
+            </span>
+
+        </div>    
+        <div class = "divsmall">
+            <span><img src="KranAktiv.jpg"></span>
+            <span>
+                <d>    
+                    Der Kran, der den Spezialcontainer hält, ist aktiviert
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+        </div>
+    </div>
+
+
+    <h1>Teilaufgabe 5 – Lotst die Schiffe auf das offene Meer</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="BootLinieUeberquert.jpg"></span>
+            <span>
+                <d>    
+                    Schiff hat die gepunktete dunkelblaue Linie vollständig überquert
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="2" value="0">
+            </span>
+        </div>
+    </div>
+
+
+    <h1>Teilaufgabe 6 – Sammelt Bonuspunkte</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="MolenelementKomplett.jpg"></span>
+            <span>
+                <d>    
+                    Molenelemente sind nicht verschoben oder beschädigt
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" min="0" max="4" value="0">
+            </span>
+        </div>
+    </div>
+
+
+    <h1>Teilaufgabe 7 – Macht das Roboterschiff fest</h1>
+    <hr>
+    <div class = "divbig">
+        <div class = "divsmall">
+            <span><img src="RoboterStartbereich.jpg"></span>
+            <span>
+                <d>    
+                    Roboter befindet sich teilweise im Start- und Zielbereich
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+        </div>
+        <div class = "divsmall">
+            <span><img src="RoboterLiegeplatz.jpg"></span>
+            <span>
+                <d>    
+                    Roboter befindet sich teilweise im Liegeplatz
+                </d>
+            </span>
+            <span>
+                <input type="number" min="0" max="1" value="0">
+            </span>
+
+        </div>    
+    </div>
+
+    <h1>Gesamtpunktzahl</h1>
+    <hr>
+    <div class = "divbig">
+        <div class="Punkte">
+            <span><d style="font-size: 30px">Punkte:</d></span>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <d>    
+        Bilder: <a href="https://www.worldrobotolympiad.de">WorldRobotOlympiad-Aufgaben-RegularCategory-Senior-WRO2023-RM-Senior</a>
+    </d>
+    <br>
+    <!--<d>Urheber: RoboticBoy</d>-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
+
+
+
+
+
