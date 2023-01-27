@@ -12,10 +12,14 @@
     <meta name="description" content="Gesamtpunkteauswertung für die WRO-Senior 2023 Aufgaben">-->
     <title>WROSeniorPunkte</title>
     <style>
+        #Impressum{
+            margin-left: 3%;
+        }
         div{
             border-radius: 8px 8px 8px 8px;
         }
         body{
+            margin: 0px;
             background-color: rgba(0, 0, 0, 0.85);
         }
         span{
@@ -77,18 +81,23 @@
         }
         input[type='radio'] 
         { 
-            transform: scale(2); 
+            transform: scale(1.5); 
             margin: 0px;
         }
         input[type='checkbox'] 
         { 
-            transform: scale(2); 
+            transform: scale(1.5); 
+        }
+        label{
+            margin: 0px;
+            padding: 0px;
         }
     </style>
     <script>
-        var auto_refresh = setInterval(function() { submitform();}, 1000);
+        var auto_refresh = setInterval(function() { submitform();}, 3000);
         function submitform()
         {
+            document.getElementById("RoboStart").submit();
             document.getElementById("BeliebigerContainerSchiff").submit();
         }
         var punkte = 0;
@@ -122,9 +131,8 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="BootKVoll">
             </span>
-
         </div>    
     </div>
 
@@ -135,12 +143,12 @@
         <div class = "divsmall">
             <span><img src="BootGroßTreibstoffstein.jpg"></span>
             <span>
-                <d>    
+                <d> 
                     Treibstoff-Stein befindet sich im/auf dem großen Schiff
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="kraftstoffsteinBoot">
             </span>
         </div>
     </div>
@@ -157,7 +165,7 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="containerWBootG">
             </span>
         </div>
         <div class = "divsmall">
@@ -168,10 +176,9 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="2" value="0">
+                <input type="number" min="0" max="2" value="0" id="ContainerFarbeBootG">
             </span>
-
-        </div>    
+        </div>  
         <div class = "divsmall">
             <span><img src="BootGroßVoll.jpg"></span>
             <span>
@@ -180,7 +187,7 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="BootGVoll">
             </span>
         </div>
     </div>
@@ -197,7 +204,7 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="ContainerRRobo">
             </span>
         </div>
         <div class = "divsmall">
@@ -219,7 +226,6 @@
                 <input type="radio" name="Kran" id="Kran" value="A">
                 <input type="radio" name="Kran" id="Kran" value="B">
             </span>
-
         </div>    
         <div class = "divsmall">
             <span><img src="KranAktiv.jpg"></span>
@@ -229,7 +235,7 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="KranAktiv">
             </span>
         </div>
     </div>
@@ -246,7 +252,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" max="2" value="0">
+                <input type="number" min="0" max="2" value="0" id="BootMeer">
             </span>
         </div>
     </div>
@@ -263,7 +269,7 @@
                 </d>
             </span>
             <span>
-                <input type="number" min="0" min="0" max="4" value="0">
+                <input type="number" min="0" min="0" max="4" value="0" id="Molenelement">
             </span>
         </div>
     </div>
@@ -280,7 +286,9 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <form>
+                    <input type="checkbox" id="RoboStart">
+                </form>
             </span>
         </div>
         <div class = "divsmall">
@@ -291,7 +299,7 @@
                 </d>
             </span>
             <span>
-                <input type="checkbox">
+                <input type="checkbox" id="RoboLiegeplatz">
             </span>
 
         </div>    
@@ -308,8 +316,9 @@
 
     <br>
     <br>
+    <div id="Impressum">
     <d>    
-        Bilder: <a href="https://www.worldrobotolympiad.de" target="_blank">WorldRobotOlympiad-Aufgaben-RegularCategory-Senior-WRO2023-RM-Senior</a>
+        Bilder: <a href="https://www.worldrobotolympiad.de" target="_blank">WorldRobotOlympiad/Aufgaben/RegularCategory/Senior/WRO2023-RM-Senior</a>
     </d>
     <br>
     <d>Urheber: RoboticBoy</d>
@@ -317,6 +326,7 @@
     <d>Erstellt mit: <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></d>
     <br>
     <d>Veröffentlicht mit: <a href="https://www.github.com" target="_blank">GitHub</a>; <a href="https://dash.cloudflare.com" target="_blank">Cloudflare dash</a></d>
+    </div>
     <br>
     <br>
     <br>
@@ -341,10 +351,24 @@
     <br>
 
     <script>
-                var auto_refresh = setInterval(function() { berechne();}, 3000);
-                function berechne(){
+                var auto_refresh = setInterval(function() { endfunction();}, 100);
+                var auto_refreshscore = setInterval(function() { score();}, 3000);
+                var robo; 
+                function score(){
                     punkte =  document.getElementById("BeliebigerContainerSchiff").value;
                     document.getElementById("Gesamtpunktzahl").innerHTML = punkte;
+
+                }
+                function endfunction(){
+                    if(document.getElementById("RoboStart").checked==true) {
+                        robo = document.getElementById("RoboLiegeplatz");
+                        robo.setAttribute("disabled", "");
+                    }
+                    else if(document.getElementById("RoboLiegeplatz").checked==true) {
+                        robo = document.getElementById("RoboStart");
+                        robo.setAttribute("disabled", "");
+                    }
+                    else robo.removeAttribute("disabled");
                     document.getElementById("Gesamtpunktzahl").max = 1;
                 }
 
